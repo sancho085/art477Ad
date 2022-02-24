@@ -1,0 +1,109 @@
+
+@font-face {
+    font-family: Stackable;
+    src: url("../fonts/chocobot_stacked.ttf");
+}
+
+@font-face {
+    font-family: Variable;
+    src: url("../fonts/fonts2/LeagueMono.ttf");
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+}
+
+.container{
+    position: absolute;
+    left: 32%;
+    top: 32%;
+    width: 600px;
+    height: 300px;
+    background-size: 200%;
+    animation: bw-slide 5s infinite alternate linear;
+    background: linear-gradient(to right, black 0%, black 63%, cadetblue 60%, cadetblue 100%);
+}
+
+@keyframes bw-slide {
+    0% 	{background-position: 0% 0%}
+    100% 	{background-position: 100% 0%}
+
+}
+.left{
+    width: 40%;
+    padding: 10px;
+    transform-style: preserve-3d;
+}
+.right{
+    left: 60%;
+}
+img{
+    position: absolute;
+    left: 57%;
+    top: 3%
+
+}
+
+@keyframes turnT {
+    0%		{transform:  rotateY(0deg)}
+    50%		{transform:  rotateY(40deg)}
+    100%	{transform:  rotateY(0deg)}
+}
+.leftText{
+    font-family: chocobot-stacked;
+    font-size: 70px;
+    width: 400px;
+    color: cadetblue;
+    padding-bottom: 50px;
+    animation: turnT 6s infinite;
+}
+
+
+
+@keyframes long {
+    0%      {font-variation-settings: "wdth" 100}
+    100%     {font-variation-settings: "wdth" 200}
+}
+.leftSubtext{
+    position: absolute;
+    top: 50%;
+    font-family: Variable;
+    font-variation-settings: "wdth" 30;
+    animation: long 2s infinite alternate;
+    color: steelblue;
+}
+
+
+@font-face {
+    font-family: 'Decovar';
+    src: url("../fonts/fonts2/DecovarAlpha.ttf");
+}
+
+.leftSubText2{
+    font-family: Decovar;
+    font-size: 20px;
+    width: 400px;
+    animation: deco 6s infinite alternate ;
+    position: absolute;
+    color: steelblue;
+    top: 160%;
+    align: center;
+}
+
+
+.leftSubText1 {
+    font-family: Decovar;
+    font-size: 100px;
+    position: absolute;
+    color: cadetblue;
+    top: 75%;
+}
+
+@keyframes deco {
+    0%      {font-variation-settings: "SKLD" 0, "TRME" 0, "SKLA" 0, "TMRC" 0}
+    25%      {font-variation-settings: "SKLD" 700, "TRME" 0, "SKLA" 0, "TMRC" 0}
+    50%      {font-variation-settings: "SKLD" 0, "TRME" 1000, "SKLA" 0, "TMRC" 0}
+    75%      {font-variation-settings: "SKLD" 0, "TRME" 0, "SKLA" 1000, "TMRC" 0}
+    100%      {font-variation-settings: "SKLD" 0, "TRME" 0, "SKLA" 0, "TMRC" 1000}
+}
